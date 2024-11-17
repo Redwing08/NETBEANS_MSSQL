@@ -81,12 +81,7 @@
                 </div>
             </s:form>
             
-            <s:form action="display" >
-                <div class="form-group">
-                    <s:submit value="View Table" />
-                </div>
-                
-            </s:form>
+         
         </div>
     </body>
 </html>
