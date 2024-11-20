@@ -14,8 +14,20 @@
         </action>
         
     
+    
+    <action name="displayUsers" class="action.DisplayAction">
+        <result name="success">/display.jsp</result>
+    </action>
 
-        
+<action name="exportHtml" class="action.ExportHtmlAction">
+    <result name="success" type="stream">
+        <param name="contentType">text/html</param>
+        <param name="inputName">fileInputStream</param>
+        <param name="contentDisposition">attachment;filename=user_list.html</param>
+        <param name="bufferSize">1024</param>
+    </result>
+</action>
+
         
         
         

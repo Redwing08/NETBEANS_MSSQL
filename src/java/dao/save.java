@@ -6,7 +6,10 @@
 package dao;
 
 import java.util.List;
+
+
 import model.user;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import util.HibernateUtil;
@@ -36,7 +39,20 @@ public class save {
     }
     
     
-    
+       // Method to get all users
+public List<user> getAllUsers() {
+    Session session = HibernateUtil.getSessionFactory().openSession();
+    List<user> users = null;
+    try {
+        String hql = "FROM user"; // HQL query
+        Query query = (Query) session.createQuery(hql); // Create query
+          users = query.list();// Cast the result to a list of users
+    } finally {
+        session.close();
+    }
+    return users;
+}
+
 
 
 }

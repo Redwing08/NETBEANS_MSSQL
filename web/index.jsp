@@ -81,7 +81,11 @@
                 </div>
             </s:form>
             
-         
+                <s:form action="displayUsers" >        
+                    <div class="form-group">
+                    <s:submit value="Register" />
+                </div>
+            </s:form>
         </div>
     </body>
 </html>
